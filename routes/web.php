@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/add-employees', function () {
+    return view('employeesform');
+});
+Route::get('/add-task', function () {
+    return view('taskform');
+});
+
