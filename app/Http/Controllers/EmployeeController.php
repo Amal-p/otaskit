@@ -49,6 +49,6 @@ class EmployeeController extends Controller
             "status" => $status,
         ]);
  
-        return redirect('back');
+        return back()->with('success', 'Employee created successfully.');
     }
 }

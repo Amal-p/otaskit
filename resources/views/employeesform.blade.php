@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+@if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                        @php
+                            Session::forget('success');
+                        @endphp
+                    </div>
+@endif
 <div class="form-container">
     <h2>{{ $title }}</h2>
     <form action="/employee/store" method="POST">
