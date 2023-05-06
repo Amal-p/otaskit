@@ -24,6 +24,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //     return view('employeesform')->with('title',"Add Employees");
 // });
 Route::get('/add-employees', [EmployeeController::class, 'showform'])->name('employee.show');
+Route::get('/edit-employees', [EmployeeController::class, 'editform'])->name('employee.edit');
+Route::get('/employee/list', [EmployeeController::class, 'listAll'])->name('employee.listall');
+Route::post('/employee/update/{employee_id}', [EmployeeController::class, 'update'])->name('employee.update');
+
 
 Route::get('/add-task', function () {
     return view('taskform')->with('title',"Add Task");

@@ -47,4 +47,11 @@
   input {
     max-width: 400px;
   }
+  table {
+    border-spacing: 0;
+    margin: auto;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
   
