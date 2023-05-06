@@ -17,9 +17,17 @@
 
             <h1>Task manager</h1>
             <br>
+            <a href="/add-employees" rel="noopener noreferrer">Add Employee</a>
+            <br>
             <a href="/employee/list" rel="noopener noreferrer">List all Employee</a>
             <br>
+            <a href="/add-task" rel="noopener noreferrer">Add Task</a>
+            <br>
             <a href="/task/list" rel="noopener noreferrer">List all Task</a>
+            <br>
+            <a href="/task/assign" rel="noopener noreferrer">Asigne A Task</a>
+            <br>
+            <a href="/task/assign/list" rel="noopener noreferrer">Asigned List Task</a>
         </center>
     </body>
 </html>

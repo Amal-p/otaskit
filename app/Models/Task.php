@@ -27,4 +27,12 @@ class Task extends Model
      * @var array
      */
     protected $fillable = ['title', 'description', 'status'];
+
+    /**
+     * Get the deparment associated with the employee.
+     */
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class, 'task_id', 'task_id');
+    }
 }

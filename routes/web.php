@@ -35,6 +35,11 @@ Route::post('/employee/update/{employee_id}', [EmployeeController::class, 'updat
 //     return view('taskform')->with('title',"Add Task");
 // });
 Route::get('/add-task', [TaskController::class, 'showTaskForm'])->name('task.show');
+Route::get('/task/assign', [TaskController::class, 'assignForm'])->name('task.assignform');
+Route::get('/task/reassign', [TaskController::class, 'editassignForm'])->name('task.assignform');
+Route::post('/task/reassign', [TaskController::class, 'reAssign'])->name('task.reassignform');
+Route::get('/task/assign/list', [TaskController::class, 'assignList'])->name('task.assignform');
+Route::post('/task/assign', [TaskController::class, 'assign'])->name('task.assign');
 Route::post('/task/store', [TaskController::class, 'taskCreate'])->name('task.create');
 Route::get('/edit-task', [TaskController::class, 'edittaskform'])->name('task.edit');
 Route::get('/task/list', [TaskController::class, 'listAll'])->name('task.listall');
