@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\TaskController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,11 +27,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/add-employees', [EmployeeController::class, 'showform'])->name('employee.show');
 Route::get('/edit-employees', [EmployeeController::class, 'editform'])->name('employee.edit');
 Route::get('/employee/list', [EmployeeController::class, 'listAll'])->name('employee.listall');
+Route::post('/employee/store', [EmployeeController::class, 'employeeCreate'])->name('employee.create');
 Route::post('/employee/update/{employee_id}', [EmployeeController::class, 'update'])->name('employee.update');
 
 
-Route::get('/add-task', function () {
-    return view('taskform')->with('title',"Add Task");
-});
-Route::post('/employee/store', [EmployeeController::class, 'employeeCreate'])->name('employee.create');
+// Route::get('/add-task', function () {
+//     return view('taskform')->with('title',"Add Task");
+// });
+Route::get('/add-task', [TaskController::class, 'showTaskForm'])->name('task.show');
+Route::post('/task/store', [TaskController::class, 'taskCreate'])->name('task.create');
+Route::get('/edit-task', [TaskController::class, 'edittaskform'])->name('task.edit');
+Route::get('/task/list', [TaskController::class, 'listAll'])->name('task.listall');
+Route::post('/task/update/{task_id}', [TaskController::class, 'update'])->name('task.update');
 

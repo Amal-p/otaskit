@@ -18,6 +18,8 @@
             <h1>Task manager</h1>
             <br>
             <a href="/employee/list" rel="noopener noreferrer">List all Employee</a>
+            <br>
+            <a href="/task/list" rel="noopener noreferrer">List all Task</a>
         </center>
     </body>
 </html>
